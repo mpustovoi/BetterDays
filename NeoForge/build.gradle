@@ -41,6 +41,11 @@ dependencies {
     // Testing mods
     //runtimeOnly "curse.maven:configured-457570:4462837"
     //runtimeOnly "curse.maven:catalogue-459701:4590890"
+    // Built for localmaven to test until they have a release
+    //runtimeOnly 'com.aetherteam.aether:aether:1.21.1-1.5.0-neoforge'
+    //runtimeOnly "curse.maven:aether-255308:${aether_neoforge_version}"
+    // Extremely annoying and strangely popular mod library that disabled doDaylightCycle on new worlds by default
+    //runtimeOnly "curse.maven:owo-532610:${owo_neoforge_version}"
 }
 
 shadowJar {
