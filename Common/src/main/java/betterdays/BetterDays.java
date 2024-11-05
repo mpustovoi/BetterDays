@@ -22,11 +22,11 @@ public class BetterDays {
    
     public static void initConfig() {
         if (Services.PLATFORM.isPhysicalClient()) {
-            SpectreConfigLoader.add(SpectreConfig.Type.CLIENT, ConfigHandler.CLIENT_SPEC, MODID);
+            SpectreConfig clientConfig = SpectreConfigLoader.add(SpectreConfig.Type.CLIENT, ConfigHandler.CLIENT_SPEC, MODID);
+            clientConfig.addLoadListener(config -> ConfigHandler.init());
         }
 
-        SpectreConfig commonConfig = SpectreConfigLoader.add(SpectreConfig.Type.COMMON, ConfigHandler.COMMON_SPEC, MODID);
-        commonConfig.addLoadListener(config -> ConfigHandler.init());
+        SpectreConfigLoader.add(SpectreConfig.Type.COMMON, ConfigHandler.COMMON_SPEC, MODID);
     }
 
 }
